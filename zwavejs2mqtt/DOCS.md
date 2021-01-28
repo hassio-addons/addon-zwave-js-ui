@@ -53,9 +53,9 @@ To do this:
 1. In the control panel, go to "Settings" in the menu and click on the "Zwave"
    bar that shows up on the right.
 1. Enter the following information:
-   - Serial Port (e.g., `/dev/serial/by-id/usb-0658_0200_if00`)
-   - Network Key (e.g., `2232666D100F795E5BB17F0A1BB7A146`)
-   - **Enable the WS Server** checkbox!
+     - Serial Port (e.g., `/dev/serial/by-id/usb-0658_0200_if00`)
+     - Network Key (e.g., `2232666D100F795E5BB17F0A1BB7A146`)
+     - **Enable the WS Server** checkbox!
 
 You can check the "Disable Gateway" box for now, as you can set up MQTT
 later (if you like that is).
@@ -69,8 +69,8 @@ Now it is time to set up Home Assistant:
 1. In the bottom left, click "+ Add Integration".
 1. Select the "Z-Wave JS" integration from the list.
 1. A dialog box will show, asking to use the add-on:
-  - **UNCHECK** that box, it will install the officia add-on.
-  - Again, the official add-on is recommended, so...
+    - **UNCHECK** that box, it will install the officia add-on.
+    - Again, the official add-on is recommended, so...
 1. In the next dialog it will ask for the server. Enter:
   `ws://a0d7b954-zwavejs2mqtt:3000`
 1. Confirm and done!
