@@ -1,0 +1,18 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: Z-Wave JS to MQTT
+# Starts zwavejs2mqtt
+# ==============================================================================
+bashio::log.info "Starting the Z-Wave JS to MQTT..."
+
+export NODE_ENV=production
+export PORT=44920
+export STORE_DIR=/data/store
+
+# Send out discovery information to Home Assistant
+./discovery &
+
+cd /opt/ \
+    || bashio::exit.nok "Could not change directory to application"
+
+exec node bin/www
