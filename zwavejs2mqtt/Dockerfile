@@ -71,15 +71,6 @@ RUN \
         /usr/lib/node_modules \
         /usr/local/share/.cache
 
-    # && yarn global add modclean \
-    # && modclean \
-    #     --path /opt/node_modules \
-    #     --no-progress \
-    #     --keep-empty \
-    #     --run \
-    # && yarn global remove modclean \
-    # && yarn cache clean \
-
 # Copy root filesystem
 COPY rootfs /
 
