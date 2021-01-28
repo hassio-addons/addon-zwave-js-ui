@@ -1,0 +1,25 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Home Assistant Community Add-on: Z-Wave JS to MQTT
+# Send zwave_js discovery information to Home Assistant
+# ==============================================================================
+declare payload
+
+# Wait for zwavejs2mqtt to be available
+bashio::net.wait_for 44920
+
+# Wait some more
+sleep 10
+
+# Prepare discovery payload
+payload=$(\
+    bashio::var.json \
+        host "$(hostname)" \
+        port "^3000" \
+)
+
+if bashio::discovery "zwave_js" "${payload}" > /dev/null; then
+    bashio::log.info "Successfully send discovery information to Home Assistant."
+else
+    bashio::log.error "Discovery message to Home Assistant failed!"
+fi
