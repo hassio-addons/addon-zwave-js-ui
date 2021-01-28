@@ -38,7 +38,7 @@ mqtt=$(bashio::var.json \
   auth "^true" \
   disabled "^true" \
   host "${host}" \
-  name "Mosquitto Add-on" \
+  name "Mosquitto" \
   password "${password}" \
   port "^${port}" \
   username "${username}" \
