@@ -16,8 +16,6 @@ Some advantages and use-cases for this are:
 
 This add-on uses the [Zwavejs2Mqtt][zwavejs2mqtt] software.
 
-[:books: Read the full add-on documentation][docs]
-
 ## Installation
 
 The installation of this add-on is pretty straightforward and not different in
@@ -33,6 +31,49 @@ comparison to installing any other Home Assistant add-on.
 
 **NOTE**: The upstream project has documentation on using the software itself:
 <https://zwave-js.github.io/zwavejs2mqtt/#/>
+
+## Setting up the Home Assistant Z-Wave JS integration
+
+By default the Home Assistant Z-Wave JS integration will try to set up the
+official "Z-Wave JS" add-on from the official add-on store.
+
+**It is recommended to use the official add-on instead of this one!**
+
+However, this add-on will provide an add-on UI and has the ability to
+send/receive data over MQTT as well. So, if that is your thing, this
+add-on might be for you.
+
+After starting the add-on successfully, it is time to hook it up with
+Home Assistant.
+
+To do this:
+
+1. Open the Z-Wave JS to MQTT control panel by clikcing the "OPEN WEB UI"
+   button on the add-on page in the Supervisor.
+1. In the control panel, go to "Settings" in the menu and click on the "Zwave"
+   bar that shows up on the right.
+1. Enter the following information:
+   - Serial Port (e.g., `/dev/serial/by-id/usb-0658_0200_if00`)
+   - Network Key (e.g., `2232666D100F795E5BB17F0A1BB7A146`)
+   - **Enable the WS Server** checkbox!
+
+You can check the "Disable Gateway" box for now, as you can set up MQTT
+later (if you like that is).
+
+Now click the "SAVE" button and navigate to the "Control Panel" in the menu.
+If you had devices paired already, you should see the showing up slowly.
+
+Now it is time to set up Home Assistant:
+
+1. Go to the Configuration panel and click "Integrations".
+1. In the bottom left, click "+ Add Integration".
+1. Select the "Z-Wave JS" integration from the list.
+1. A dialog box will show, asking to use the add-on:
+  - **UNCHECK** that box, it will install the officia add-on.
+  - Again, the official add-on is recommended, so...
+1. In the next dialog it will ask for the server. Enter:
+  `ws://a0d7b954-zwavejs2mqtt:3000`
+1. Confirm and done!
 
 ## Configuration
 
@@ -64,7 +105,9 @@ you are troubleshooting.
 
 ## Known issues and limitations
 
-- None at this point.
+- Z-Wave JS to MQTT supports Home Assistant Discovery over MQTT. It is
+  **STRONGLY** recommended **NOT** to use that option. Use the Z-Wave JS
+  integration as documented above instead.
 
 ## Changelog & Releases
 
