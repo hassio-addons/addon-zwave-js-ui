@@ -6,7 +6,7 @@
 declare payload
 
 # Wait for zwavejs2mqtt to be available
-bashio::net.wait_for 44920
+bashio::net.wait_for 3000 localhost 1800
 
 # Wait some more
 sleep 10
