@@ -16,5 +16,11 @@
   "map": ["share:rw"],
   "schema": {
     "log_level": "list(trace|debug|info|notice|warning|error|fatal)?"
+  },
+  "ports": {
+    "3000/tcp": null
+  },
+  "ports_description": {
+    "3000/tcp": "Z-Wave JS communication"
   }
 }
