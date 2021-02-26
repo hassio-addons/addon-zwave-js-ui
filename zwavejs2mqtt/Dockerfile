@@ -11,7 +11,7 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r2 \
         linux-headers=5.7.8-r0 \
-        npm=14.15.5-r0 \
+        npm=14.16.0-r0 \
         python3-dev=3.8.7-r1 \
         yarn=1.22.10-r0 \
     \
@@ -19,7 +19,7 @@ RUN \
         eudev=3.2.9-r3 \
         libusb=1.0.24-r1 \
         nginx=1.18.0-r13 \
-        nodejs=14.15.5-r0 \
+        nodejs=14.16.0-r0 \
     \
     && curl -J -L -o /tmp/zwavejs2mqtt.tar.gz \
         "https://github.com/zwave-js/zwavejs2mqtt/archive/v1.2.3.tar.gz" \
