@@ -12,7 +12,7 @@ RUN \
         build-base=0.5-r2 \
         linux-headers=5.7.8-r0 \
         npm=14.16.0-r0 \
-        python3-dev=3.8.7-r1 \
+        python3-dev=3.8.8-r0 \
         yarn=1.22.10-r0 \
     \
     && apk add --no-cache \
