@@ -34,7 +34,7 @@ RUN \
     && npm prune --production \
     \
     && curl -J -L -o /tmp/zwavejs.tar.gz \
-        "https://github.com/zwave-js/node-zwave-js/archive/68294d7406bf6603b058ffeab1c1dc4949a5a7d3.tar.gz" \
+        "https://github.com/zwave-js/node-zwave-js/archive/36535100be7530c17473214c221bce49ba01842f.tar.gz" \
     && mkdir /tmp/zwavejs \
     && tar zxvf \
         /tmp/zwavejs.tar.gz \
