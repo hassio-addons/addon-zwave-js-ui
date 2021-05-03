@@ -49,7 +49,6 @@ RUN \
         /etc/nginx \
         /opt/build \
         /opt/index.html \
-        /opt/package-lock.json \
         /opt/package.sh \
         /opt/src \
         /opt/static \
