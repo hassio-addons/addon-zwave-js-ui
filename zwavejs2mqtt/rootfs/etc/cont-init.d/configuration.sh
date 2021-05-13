@@ -11,6 +11,10 @@ declare port="1883"
 declare username=""
 declare zwave
 
+if ! bashio::fs.directory_exists "/data/db"; then
+  mkdir -p /data/db
+fi
+
 if bashio::fs.directory_exists "/data/store"; then
   bashio::exit.ok
 fi
