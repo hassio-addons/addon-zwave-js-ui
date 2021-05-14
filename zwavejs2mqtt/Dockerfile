@@ -33,18 +33,7 @@ RUN \
     && npm run build \
     && npm prune --production \
     \
-    && curl -J -L -o /tmp/zwavejs.tar.gz \
-        "https://github.com/zwave-js/node-zwave-js/archive/a3d67de7d113c46460044ca3ecf01eb5c953cffc.tar.gz" \
-    && mkdir /tmp/zwavejs \
-    && tar zxvf \
-        /tmp/zwavejs.tar.gz \
-        --strip 1 -C /tmp/zwavejs \
-    \
-    && rm -f -r /opt/node_modules/@zwave-js/config/config/devices/* \
-    && mv /tmp/zwavejs/packages/config/config/devices/* /opt/node_modules/@zwave-js/config/config/devices/ \
-    \
     && apk del --no-cache --purge .build-dependencies \
-    \
     && rm -f -r \
         /etc/nginx \
         /opt/build \
