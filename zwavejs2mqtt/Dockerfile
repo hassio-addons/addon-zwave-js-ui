@@ -33,6 +33,7 @@ RUN \
     && yarn run build:server \
     && yarn run build:ui \
     && yarn install --production --ignore-optional \
+    && yarn cache clean \
     \
     && apk del --no-cache --purge .build-dependencies \
     && rm -f -r \
