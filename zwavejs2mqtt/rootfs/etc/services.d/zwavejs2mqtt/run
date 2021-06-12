@@ -15,4 +15,4 @@ export ZWAVEJS_EXTERNAL_CONFIG=/data/db
 cd /opt/ \
     || bashio::exit.nok "Could not change directory to application"
 
-exec node bin/www
+exec node server/bin/www
