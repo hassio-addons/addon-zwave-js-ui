@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:9.2.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:9.2.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -18,7 +18,7 @@ RUN \
     && apk add --no-cache \
         eudev=3.2.9-r3 \
         libusb=1.0.24-r1 \
-        nginx=1.18.0-r14 \
+        nginx=1.18.0-r15 \
         nodejs=14.16.1-r1 \
     \
     && curl -J -L -o /tmp/zwavejs2mqtt.tar.gz \
