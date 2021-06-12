@@ -28,10 +28,11 @@ RUN \
         --strip 1 -C /opt \
     \
     && cd /opt \
-    && npm config set unsafe-perm \
-    && npm install \
-    && npm run build \
-    && npm prune --production \
+    && yarn config set unsafe-perm \
+    && yarn install --ignore-optional \
+    && yarn run build:server \
+    && yarn run build:ui \
+    && yarn install --production --ignore-optional \
     \
     && apk del --no-cache --purge .build-dependencies \
     && rm -f -r \
