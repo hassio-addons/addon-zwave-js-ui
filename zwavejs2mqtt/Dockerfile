@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:9.2.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:10.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -10,16 +10,16 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r2 \
-        linux-headers=5.7.8-r0 \
-        npm=14.16.1-r1 \
-        python3-dev=3.8.10-r0 \
+        linux-headers=5.10.41-r0 \
+        npm=7.17.0-r0 \
+        python3-dev=3.9.5-r1 \
         yarn=1.22.10-r0 \
     \
     && apk add --no-cache \
-        eudev=3.2.9-r3 \
-        libusb=1.0.24-r1 \
-        nginx=1.18.0-r15 \
-        nodejs=14.16.1-r1 \
+        eudev=3.2.10-r0 \
+        libusb=1.0.24-r2 \
+        nginx=1.20.1-r3 \
+        nodejs=14.17.1-r0 \
     \
     && curl -J -L -o /tmp/zwavejs2mqtt.tar.gz \
         "https://github.com/zwave-js/zwavejs2mqtt/archive/v5.0.2.tar.gz" \
