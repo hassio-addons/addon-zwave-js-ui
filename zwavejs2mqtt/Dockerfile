@@ -19,7 +19,7 @@ RUN \
         eudev=3.2.10-r0 \
         libusb=1.0.24-r2 \
         nginx=1.20.1-r3 \
-        nodejs=14.17.1-r0 \
+        nodejs=14.17.4-r0 \
     \
     && curl -J -L -o /tmp/zwavejs2mqtt.tar.gz \
         "https://github.com/zwave-js/zwavejs2mqtt/archive/v5.4.2.tar.gz" \
