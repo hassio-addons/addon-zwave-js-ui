@@ -30,6 +30,7 @@ RUN \
     && cd /opt \
     && yarn config set unsafe-perm \
     && yarn install --ignore-optional \
+    && yarn upgrade @zwave-js/server@1.10.0 \
     && yarn run build:server \
     && yarn run build:ui \
     && yarn install --production --ignore-optional \
