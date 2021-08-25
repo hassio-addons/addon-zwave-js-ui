@@ -22,7 +22,7 @@ RUN \
         nodejs=14.17.4-r0 \
     \
     && curl -J -L -o /tmp/zwavejs2mqtt.tar.gz \
-        "https://github.com/zwave-js/zwavejs2mqtt/archive/v5.4.6.tar.gz" \
+        "https://github.com/zwave-js/zwavejs2mqtt/archive/v5.5.0.tar.gz" \
     && tar zxvf \
         /tmp/zwavejs2mqtt.tar.gz \
         --strip 1 -C /opt \
@@ -30,7 +30,6 @@ RUN \
     && cd /opt \
     && yarn config set unsafe-perm \
     && yarn install --ignore-optional \
-    && yarn upgrade @zwave-js/server@1.10.0 \
     && yarn run build:server \
     && yarn run build:ui \
     && yarn install --production --ignore-optional \
