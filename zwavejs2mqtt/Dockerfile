@@ -22,7 +22,7 @@ RUN \
         nodejs=14.17.4-r0 \
     \
     && curl -J -L -o /tmp/zwavejs2mqtt.tar.gz \
-        "https://github.com/zwave-js/zwavejs2mqtt/archive/v5.5.0.tar.gz" \
+        "https://github.com/zwave-js/zwavejs2mqtt/archive/v5.5.1.tar.gz" \
     && tar zxvf \
         /tmp/zwavejs2mqtt.tar.gz \
         --strip 1 -C /opt \
