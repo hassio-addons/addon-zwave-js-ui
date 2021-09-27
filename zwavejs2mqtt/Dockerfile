@@ -29,6 +29,7 @@ RUN \
     \
     && cd /opt \
     && yarn config set unsafe-perm \
+    && yarn config set network-timeout 1000000 \
     && yarn install --ignore-optional \
     && yarn run build:server \
     && yarn run build:ui \
