@@ -5,37 +5,41 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Yarn can timeout from time to time in CI
+ENV YARN_HTTP_TIMEOUT=1000000
+
 # Setup base
-# hadolint ignore=DL3003
+# hadolint ignore=DL3003,SC2046
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r2 \
         linux-headers=5.10.41-r0 \
         npm=7.17.0-r0 \
         python3-dev=3.9.5-r1 \
-        yarn=1.22.10-r0 \
     \
     && apk add --no-cache \
         eudev=3.2.10-r0 \
         libusb=1.0.24-r2 \
         nginx=1.20.1-r3 \
-        nodejs=14.18.1-r0 \
+        nodejs-current=16.11.1-r0 \
+    \
+    && npm install --global yarn@2.4.3 \
     \
     && curl -J -L -o /tmp/zwavejs2mqtt.tar.gz \
-        "https://github.com/zwave-js/zwavejs2mqtt/archive/v5.8.0.tar.gz" \
+        "https://github.com/zwave-js/zwavejs2mqtt/archive/v5.10.1.tar.gz" \
     && tar zxvf \
         /tmp/zwavejs2mqtt.tar.gz \
         --strip 1 -C /opt \
     \
     && cd /opt \
-    && yarn config set unsafe-perm \
-    && yarn config set network-timeout 1000000 \
-    && yarn install --ignore-optional \
+    && yarn install --immutable \
     && yarn run build:server \
     && yarn run build:ui \
-    && yarn install --production --ignore-optional \
+    && yarn remove \
+        $(jq -r '.devDependencies | keys | join(" ")' package.json) \
     && yarn cache clean \
     \
+    && npm uninstall -g yarn \
     && apk del --no-cache --purge .build-dependencies \
     && rm -f -r \
         /etc/nginx \
