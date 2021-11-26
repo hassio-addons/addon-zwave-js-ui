@@ -15,7 +15,7 @@ RUN \
         build-base=0.5-r2 \
         linux-headers=5.10.41-r0 \
         npm=7.17.0-r0 \
-        python3-dev=3.9.5-r1 \
+        python3-dev=3.9.5-r2 \
     \
     && apk add --no-cache \
         eudev=3.2.10-r0 \
