@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:10.2.3
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:11.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -14,14 +14,14 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r2 \
         linux-headers=5.10.41-r0 \
-        npm=7.17.0-r0 \
-        python3-dev=3.9.5-r2 \
+        npm=8.1.3-r0 \
+        python3-dev=3.9.7-r4 \
     \
     && apk add --no-cache \
-        eudev=3.2.10-r0 \
-        libusb=1.0.24-r2 \
+        eudev=3.2.11_pre1-r0 \
+        libusb=1.0.24-r3 \
         nginx=1.20.2-r0 \
-        nodejs-current=16.11.1-r0 \
+        nodejs=16.13.0-r0 \
     \
     && npm install --global yarn@2.4.3 \
     \
