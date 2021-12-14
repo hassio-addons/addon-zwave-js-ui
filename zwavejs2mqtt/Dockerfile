@@ -26,7 +26,7 @@ RUN \
     && npm install --global yarn@2.4.3 \
     \
     && curl -J -L -o /tmp/zwavejs2mqtt.tar.gz \
-        "https://github.com/zwave-js/zwavejs2mqtt/archive/v6.0.3.tar.gz" \
+        "https://github.com/zwave-js/zwavejs2mqtt/archive/v6.1.0.tar.gz" \
     && tar zxvf \
         /tmp/zwavejs2mqtt.tar.gz \
         --strip 1 -C /opt \
