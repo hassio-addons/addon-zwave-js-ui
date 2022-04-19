@@ -21,7 +21,7 @@ RUN \
         eudev=3.2.11_pre1-r0 \
         libusb=1.0.24-r3 \
         nginx=1.20.2-r0 \
-        nodejs=16.14.0-r0 \
+        nodejs=16.14.2-r0 \
     \
     && npm install --global yarn@2.4.3 \
     \
