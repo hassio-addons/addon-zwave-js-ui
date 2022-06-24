@@ -1,12 +1,9 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:12.0.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/amd64:12.2.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-
-# Yarn can timeout from time to time in CI
-ENV YARN_HTTP_TIMEOUT=1000000
 
 # Setup base
 # hadolint ignore=DL3003,SC2046
