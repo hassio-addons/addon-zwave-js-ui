@@ -9,6 +9,8 @@ export NODE_ENV=production
 export PORT=44920
 export STORE_DIR=/data/store
 export ZWAVEJS_EXTERNAL_CONFIG=/data/db
+export FORCE_DISABLE_SSL=true
+
 # Send out discovery information to Home Assistant
 ./discovery &
 
