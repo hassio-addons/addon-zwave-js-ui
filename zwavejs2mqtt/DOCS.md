@@ -70,11 +70,11 @@ If you had devices paired already, you should see the showing up slowly.
 
 Now it is time to set up Home Assistant:
 
-1. Go to the Configuration panel and click "Integrations".
-1. In the bottom left, click "+ Add Integration".
-1. Select the "Z-Wave JS" integration from the list.
+1. Go to the Settings panel and click "Devices & Services".
+1. In the bottom right, click "+ Add Integration".
+1. Select the "Z-Wave" integration from the list.
 1. A dialog box will show, asking to use the add-on:
-   - **UNCHECK** that box, it will install the officia add-on.
+   - **UNCHECK** that box, it will install the official add-on.
    - Again, the official add-on is recommended, so...
 1. In the next dialog it will ask for the server. Enter:
    `ws://a0d7b954-zwavejs2mqtt:3000`
