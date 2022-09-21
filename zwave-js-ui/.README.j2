@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: Z-Wave JS to MQTT
+# Home Assistant Community Add-on: Z-Wave JS UI
 
 [![Release][release-shield]][release] ![Project Stage][project-stage-shield] ![Project Maintenance][maintenance-shield]
 
@@ -8,21 +8,16 @@
 
 [![Support Frenck on Patreon][patreon-shield]][patreon]
 
-Fully configurable Z-Wave JS to MQTT gateway and control panel.
+Fully configurable Z-Wave JS control panel and MQTT gateway.
 
-![Z-Wave JS to MQTT][logo]
+![Z-Wave JS UI][logo]
 
 ## About
 
-The Z-Wave JS to MQTT add-on allows you to decouple your Z-Wave network from
-your Home Assistant instance by leveraging your MQTT broker. It ships with
-a web-based control panel, allowing you to configure every aspect of your
-Z-Wave network and how they are published in MQTT.
-
-**Note**: Unlike the title of the software suggests, you don't need to
-use MQTT part (it is even disabled by default). It will work directly
-without MQTT using the Home Assistant integration. The add-on will provide
-a nice secondairy and extensive Z-Wave JS control interface in such cases.
+The Z-Wave JS UI add-on provides an additional control panel, allowing you
+to configure every aspect of your Z-Wave network. It provides a decouled
+gateway which can communicate using Z-Wave JS WebSockets (used by the
+Home Assistant Z-Wave JS integration) and MQTT (even simultaneously).
 
 Some advantages and use-cases:
 
@@ -34,7 +29,7 @@ Some advantages and use-cases:
   with your Z-Wave network.
 - Pre-configures itself with the Mosquitto add-on when found.
 
-This add-on uses the [Zwavejs2Mqtt][zwavejs2mqtt] software.
+This add-on uses the [Z-Wave JS UI][zwave-js-ui] software.
 
 {% if channel == "edge" %}
 ## WARNING! THIS IS AN EDGE VERSION!
@@ -82,7 +77,7 @@ If you are more interested in stable releases of our add-ons:
 [forum]: https://community.home-assistant.io/?u=frenck
 [github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
 [github-sponsors]: https://github.com/sponsors/frenck
-[logo]: https://github.com/hassio-addons/addon-zwavejs2mqtt/raw/main/zwavejs2mqtt/logo.png
+[logo]: https://github.com/hassio-addons/addon-zwave-js-ui/raw/main/zwave-js-ui/logo.png
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
 [patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
 [patreon]: https://www.patreon.com/frenck

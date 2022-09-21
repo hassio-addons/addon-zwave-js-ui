@@ -1,9 +1,9 @@
 #!/command/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: Z-Wave JS to MQTT
-# Starts zwavejs2mqtt
+# Home Assistant Community Add-on: Z-Wave JS UI
+# Starts zwave-js-ui
 # ==============================================================================
-bashio::log.info "Starting the Z-Wave JS to MQTT..."
+bashio::log.info "Starting the Z-Wave JS UI..."
 
 export NODE_ENV=production
 export PORT=44920

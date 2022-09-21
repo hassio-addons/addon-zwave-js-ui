@@ -1,14 +1,9 @@
-# Home Assistant Community Add-on: Z-Wave JS to MQTT
+# Home Assistant Community Add-on: Z-Wave JS UI
 
-The Z-Wave JS to MQTT add-on allows you to decouple your Z-Wave network from
-your Home Assistant instance by leveraging your MQTT broker. It ships with
-a web-based control panel, allowing you to configure every aspect of your
-Z-Wave network and how they are published in MQTT.
-
-**Note**: Unlike the title of the software suggests, you don't need to
-use MQTT part (it is even disabled by default). It will work directly
-without MQTT using the Home Assistant integration. The add-on will provide
-a nice secondairy and extensive Z-Wave JS control interface in such cases.
+The Z-Wave JS UI add-on provides an additional control panel, allowing you
+to configure every aspect of your Z-Wave network. It provides a decouled
+gateway which can communicate using Z-Wave JS WebSockets (used by the
+Home Assistant Z-Wave JS integration) and MQTT (even simultaneously).
 
 Some advantages and use-cases:
 
@@ -20,7 +15,7 @@ Some advantages and use-cases:
   with your Z-Wave network.
 - Pre-configures itself with the Mosquitto add-on when found.
 
-This add-on uses the [Zwavejs2Mqtt][zwavejs2mqtt] software.
+This add-on uses the [Z-Wave JS UI][zwave-js-ui] software.
 
 ## Installation
 
@@ -33,20 +28,18 @@ comparison to installing any other Home Assistant add-on.
    [![Open this add-on in your Home Assistant instance.][addon-badge]][addon]
 
 1. Click the "Install" button to install the add-on.
-1. Check the logs of the "Z-Wave JS to MQTT" add-on to see if everything went
+1. Check the logs of the "Z-Wave JS UI" add-on to see if everything went
    well.
 1. Click the "OPEN WEB UI" button.
 1. Enjoy the add-on!
 
 **NOTE**: The upstream project has documentation on using the software itself:
-<https://zwave-js.github.io/zwavejs2mqtt/#/>
+<https://zwave-js.github.io/zwave-js-ui/#/>
 
 ## Setting up the Home Assistant Z-Wave JS integration
 
 By default the Home Assistant Z-Wave JS integration will try to set up the
 official "Z-Wave JS" add-on from the official add-on store.
-
-**It is recommended to use the official add-on instead of this one!**
 
 However, this add-on will provide an add-on UI and has the ability to
 send/receive data over MQTT as well. So, if that is your thing, this
@@ -57,7 +50,7 @@ Home Assistant.
 
 To do this:
 
-1. Open the Z-Wave JS to MQTT control panel by clikcing the "OPEN WEB UI"
+1. Open the Z-Wave JS UI control panel by clicking the "OPEN WEB UI"
    button on the add-on page in the Supervisor.
 1. In the control panel, go to "Settings" in the menu and click on the "Zwave"
    bar that shows up on the right.
@@ -110,7 +103,7 @@ you are troubleshooting.
 
 ## Known issues and limitations
 
-- Z-Wave JS to MQTT supports Home Assistant Discovery over MQTT. It is
+- Z-Wave JS UI supports Home Assistant Discovery over MQTT. It is
   **STRONGLY** recommended **NOT** to use that option. Use the Z-Wave JS
   integration as documented above instead.
 
@@ -175,15 +168,15 @@ SOFTWARE.
 
 [addon-badge]: https://my.home-assistant.io/badges/supervisor_addon.svg
 [addon]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a0d7b954_zwavejs2mqtt&repository_url=https%3A%2F%2Fgithub.com%2Fhassio-addons%2Frepository
-[contributors]: https://github.com/hassio-addons/addon-zwavejs2mqtt/graphs/contributors
+[contributors]: https://github.com/hassio-addons/addon-zwave-js-ui/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
 [esphome]: https://esphome.io/components/mqtt.html#on-message-trigger
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/?u=frenck
 [frenck]: https://github.com/frenck
-[issue]: https://github.com/hassio-addons/addon-zwavejs2mqtt/issues
+[issue]: https://github.com/hassio-addons/addon-zwave-js-ui/issues
 [reddit]: https://reddit.com/r/homeassistant
-[releases]: https://github.com/hassio-addons/addon-zwavejs2mqtt/releases
+[releases]: https://github.com/hassio-addons/addon-zwave-js-ui/releases
 [semver]: http://semver.org/spec/v2.0.0.htm
-[zwavejs2mqtt]: https://github.com/zwave-js/zwavejs2mqtt
+[zwave-js-ui]: https://github.com/zwave-js/zwave-js-ui

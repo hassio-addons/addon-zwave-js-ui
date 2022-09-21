@@ -1,10 +1,10 @@
 #!/command/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: Z-Wave JS to MQTT
+# Home Assistant Community Add-on: Z-Wave JS UI
 # Runs the Nginx daemon
 # ==============================================================================
 
-# Wait for zwavejs2mqtt to be available
+# Wait for Z-Wave JS UI to be available
 bashio::net.wait_for 44920
 
 bashio::log.info "Starting NGinx..."

@@ -1,6 +1,6 @@
 #!/command/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: Z-Wave JS to MQTT
+# Home Assistant Community Add-on: Z-Wave JS UI
 # Creates store folder if it doesn't exists yet
 # ==============================================================================
 declare gateway

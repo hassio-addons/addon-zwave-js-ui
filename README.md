@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: Z-Wave JS to MQTT
+# Home Assistant Community Add-on: Z-Wave JS UI
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -21,21 +21,16 @@
 
 [![Support Frenck on Patreon][patreon-shield]][patreon]
 
-Fully configurable Z-Wave JS to MQTT gateway and control panel.
+Fully configurable Z-Wave JS control panel and MQTT gateway.
 
-![Z-Wave JS to MQTT](zwavejs2mqtt/logo.png)
+![Z-Wave JS UI](zwave-js-ui/logo.png)
 
 ## About
 
-The Z-Wave JS to MQTT add-on allows you to decouple your Z-Wave network from
-your Home Assistant instance by leveraging your MQTT broker. It ships with
-a web-based control panel, allowing you to configure every aspect of your
-Z-Wave network and how they are published in MQTT.
-
-**Note**: Unlike the title of the software suggests, you don't need to
-use MQTT part (it is even disabled by default). It will work directly
-without MQTT using the Home Assistant integration. The add-on will provide
-a nice secondairy and extensive Z-Wave JS control interface in such cases.
+The Z-Wave JS UI add-on provides an additional control panel, allowing you
+to configure every aspect of your Z-Wave network. It provides a decouled
+gateway which can communicate using Z-Wave JS WebSockets (used by the
+Home Assistant Z-Wave JS integration) and MQTT (even simultaneously).
 
 Some advantages and use-cases:
 
@@ -47,7 +42,9 @@ Some advantages and use-cases:
   with your Z-Wave network.
 - Pre-configures itself with the Mosquitto add-on when found.
 
-This add-on uses the [Zwavejs2Mqtt][zwavejs2mqtt] software.
+This add-on uses the [Z-Wave JS UI][zwave-js-ui] software.
+
+This add-on uses the [Z-Wave JS UI][zwave-js-ui] software.
 
 [:books: Read the full add-on documentation][docs]
 
@@ -118,30 +115,30 @@ SOFTWARE.
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
-[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-zwavejs2mqtt.svg
-[commits]: https://github.com/hassio-addons/addon-zwavejs2mqtt/commits/main
-[contributors]: https://github.com/hassio-addons/addon-zwavejs2mqtt/graphs/contributors
+[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-zwave-js-ui.svg
+[commits]: https://github.com/hassio-addons/addon-zwave-js-ui/commits/main
+[contributors]: https://github.com/hassio-addons/addon-zwave-js-ui/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord-shield]: https://img.shields.io/discord/478094546522079232.svg
 [discord]: https://discord.me/hassioaddons
-[docs]: https://github.com/hassio-addons/addon-zwavejs2mqtt/blob/main/zwavejs2mqtt/DOCS.md
+[docs]: https://github.com/hassio-addons/addon-zwave-js-ui/blob/main/zwave-js-ui/DOCS.md
 [esphome]: https://esphome.io/components/mqtt.html#on-message-trigger
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/?u=frenck
 [frenck]: https://github.com/frenck
-[github-actions-shield]: https://github.com/hassio-addons/addon-zwavejs2mqtt/workflows/CI/badge.svg
-[github-actions]: https://github.com/hassio-addons/addon-zwavejs2mqtts/actions
+[github-actions-shield]: https://github.com/hassio-addons/addon-zwave-js-ui/workflows/CI/badge.svg
+[github-actions]: https://github.com/hassio-addons/addon-zwave-js-uis/actions
 [github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
 [github-sponsors]: https://github.com/sponsors/frenck
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
-[issue]: https://github.com/hassio-addons/addon-zwavejs2mqtt/issues
-[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-zwavejs2mqtt.svg
+[issue]: https://github.com/hassio-addons/addon-zwave-js-ui/issues
+[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-zwave-js-ui.svg
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2022.svg
 [patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
 [patreon]: https://www.patreon.com/frenck
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
 [reddit]: https://reddit.com/r/homeassistant
-[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-zwavejs2mqtt.svg
-[releases]: https://github.com/hassio-addons/addon-zwavejs2mqtt/releases
+[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-zwave-js-ui.svg
+[releases]: https://github.com/hassio-addons/addon-zwave-js-ui/releases
 [repository]: https://github.com/hassio-addons/repository
-[zwavejs2mqtt]: https://github.com/zwave-js/zwavejs2mqtt
+[zwave-js-ui]: https://github.com/zwave-js/zwave-js-ui
