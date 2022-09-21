@@ -44,7 +44,6 @@ Some advantages and use-cases:
 
 This add-on uses the [Z-Wave JS UI][zwave-js-ui] software.
 
-
 This add-on uses the [Z-Wave JS UI][zwave-js-ui] software.
 
 [:books: Read the full add-on documentation][docs]
