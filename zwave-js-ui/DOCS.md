@@ -66,6 +66,8 @@ Now it is time to set up Home Assistant:
 1. Go to the Settings panel and click "Devices & Services".
 1. In the bottom right, click "+ Add Integration".
 1. Select the "Z-Wave" integration from the list.
+   - You may need to choose "Setup another instance of Z-Wave" if the add-on
+     has been auto-detected as a device.
 1. A dialog box will show, asking to use the add-on:
    - **UNCHECK** that box, it will install the official add-on.
    - Again, the official add-on is recommended, so...
