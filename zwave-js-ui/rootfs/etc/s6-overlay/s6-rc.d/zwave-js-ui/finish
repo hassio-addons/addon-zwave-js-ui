@@ -2,7 +2,7 @@
 # shellcheck shell=bash
 # ==============================================================================
 # Home Assistant Community Add-on: Z-Wave JS UI
-# Take down the S6 supervision tree when zwave-js-ui fails
+# Take down the S6 supervision tree when Z-Wave JS UI fails
 # ==============================================================================
 declare exit_code
 readonly exit_code_container=$(</run/s6-linux-init-container-results/exitcode)
