@@ -23,7 +23,7 @@ RUN \
     && npm install --global yarn@2.4.3 \
     \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
-        "https://github.com/zwave-js/zwave-js-ui/archive/v8.6.0.tar.gz" \
+        "https://github.com/zwave-js/zwave-js-ui/archive/v8.6.1.tar.gz" \
     && tar zxvf \
         /tmp/zwave-js-ui.tar.gz \
         --strip 1 -C /opt \
