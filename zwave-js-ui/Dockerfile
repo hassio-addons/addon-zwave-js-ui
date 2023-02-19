@@ -12,18 +12,18 @@ RUN \
         build-base=0.5-r3 \
         linux-headers=5.19.5-r0 \
         npm=9.1.2-r0 \
-        python3-dev=3.10.9-r1 \
+        python3-dev=3.10.10-r0 \
     \
     && apk add --no-cache \
         eudev=3.2.11-r4 \
         libusb=1.0.26-r0 \
         nginx=1.22.1-r0 \
-        nodejs=18.12.1-r0 \
+        nodejs=18.14.1-r0 \
     \
     && npm install --global yarn@2.4.3 \
     \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
-        "https://github.com/zwave-js/zwave-js-ui/archive/v8.8.3.tar.gz" \
+        "https://github.com/zwave-js/zwave-js-ui/archive/v8.8.5.tar.gz" \
     && tar zxvf \
         /tmp/zwave-js-ui.tar.gz \
         --strip 1 -C /opt \
