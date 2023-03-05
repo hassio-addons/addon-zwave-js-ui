@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.1.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.1.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -18,7 +18,7 @@ RUN \
         eudev=3.2.11-r4 \
         libusb=1.0.26-r0 \
         nginx=1.22.1-r0 \
-        nodejs=18.14.1-r0 \
+        nodejs=18.14.2-r0 \
     \
     && npm install --global yarn@2.4.3 \
     \
