@@ -12,9 +12,6 @@ export STORE_DIR=/data/store
 export ZWAVEJS_EXTERNAL_CONFIG=/data/db
 export FORCE_DISABLE_SSL=true
 
-# Send out discovery information to Home Assistant
-./discovery &
-
 cd /opt/ \
     || bashio::exit.nok "Could not change directory to application"
 
