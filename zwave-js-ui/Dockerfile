@@ -6,6 +6,7 @@ FROM ${BUILD_FROM}
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
+ARG ZWAVE_JS_UI_VERSION="v8.11.0"
 # hadolint ignore=DL3003,SC2046
 RUN \
     apk add --no-cache --virtual .build-dependencies \
@@ -23,7 +24,7 @@ RUN \
     && npm install --global yarn@2.4.3 \
     \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
-        "https://github.com/zwave-js/zwave-js-ui/archive/v8.11.0.tar.gz" \
+        "https://github.com/zwave-js/zwave-js-ui/archive/${ZWAVE_JS_UI_VERSION}.tar.gz" \
     && tar zxvf \
         /tmp/zwave-js-ui.tar.gz \
         --strip 1 -C /opt \
