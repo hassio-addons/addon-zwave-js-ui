@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:13.2.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:14.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -11,15 +11,15 @@ ARG ZWAVE_JS_UI_VERSION="v8.15.0"
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
-        linux-headers=5.19.5-r0 \
-        npm=9.1.2-r0 \
-        python3-dev=3.10.11-r0 \
+        linux-headers=6.3-r0 \
+        npm=9.6.6-r0 \
+        python3-dev=3.11.3-r11 \
     \
     && apk add --no-cache \
-        eudev=3.2.11-r4 \
-        libusb=1.0.26-r0 \
-        nginx=1.22.1-r0 \
-        nodejs=18.14.2-r0 \
+        eudev=3.2.11-r8 \
+        libusb=1.0.26-r2 \
+        nginx=1.24.0-r3 \
+        nodejs=18.16.0-r1 \
     \
     && npm install --global yarn@2.4.3 \
     \
