@@ -21,7 +21,6 @@ discovery:
   - zwave_js
 services:
   - mqtt:want
-watchdog: http://[HOST]:[PORT:8099]/health/zwave
 uart: true
 udev: true
 map:
