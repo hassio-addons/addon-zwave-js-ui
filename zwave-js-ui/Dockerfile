@@ -6,7 +6,7 @@ FROM ${BUILD_FROM}
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
-ARG ZWAVE_JS_UI_VERSION="v8.16.2"
+ARG ZWAVE_JS_UI_VERSION="v8.17.0"
 # hadolint ignore=DL3003,SC2046
 RUN \
     apk add --no-cache --virtual .build-dependencies \
