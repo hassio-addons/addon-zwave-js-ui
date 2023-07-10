@@ -11,6 +11,7 @@ panel_title: Z-Wave JS
 panel_icon: mdi:z-wave
 startup: system
 init: false
+timeout: 30
 arch:
   - aarch64
   - amd64

@@ -5,6 +5,11 @@ FROM ${BUILD_FROM}
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+# Environment configuration
+ENV \
+    S6_KILL_GRACETIME=30000 \
+    S6_SERVICES_GRACETIME=30000
+
 # Setup base
 ARG ZWAVE_JS_UI_VERSION="v8.19.0"
 # hadolint ignore=DL3003,SC2046
