@@ -23,7 +23,7 @@ RUN \
     && apk add --no-cache \
         eudev=3.2.11-r8 \
         libusb=1.0.26-r2 \
-        nginx=1.24.0-r6 \
+        nginx=1.24.0-r7 \
         nodejs=18.18.2-r0 \
     \
     && npm install --global yarn@2.4.3 \
