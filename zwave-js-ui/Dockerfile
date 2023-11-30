@@ -42,7 +42,7 @@ RUN \
     && npm cache clean \
     \
     && apk del --no-cache --purge .build-dependencies \
-    && find ./opt -maxdepth 1 \
+    && find ./opt -mindepth 1 -maxdepth 1 \
     ! -name "node_modules" \
     ! -name "snippets" \
     ! -name ".git" \
