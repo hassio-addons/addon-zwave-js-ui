@@ -16,15 +16,15 @@ ARG ZWAVE_JS_UI_VERSION="v9.5.1"
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
-        linux-headers=6.3-r0 \
-        npm=9.6.6-r0 \
-        python3-dev=3.11.6-r0 \
+        linux-headers=6.5-r0 \
+        npm=10.2.5-r0 \
+        python3-dev=3.11.6-r1 \
     \
     && apk add --no-cache \
-        eudev=3.2.11-r8 \
-        libusb=1.0.26-r2 \
-        nginx=1.24.0-r7 \
-        nodejs=18.18.2-r0 \
+        eudev=3.2.14-r0 \
+        libusb=1.0.26-r3 \
+        nginx=1.24.0-r14 \
+        nodejs=20.10.0-r1 \
     \
     && npm install --global yarn@2.4.3 \
     \
