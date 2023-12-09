@@ -26,8 +26,6 @@ RUN \
         nginx=1.24.0-r14 \
         nodejs=20.10.0-r1 \
     \
-    && npm install --global yarn@2.4.3 \
-    \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
         "https://github.com/zwave-js/zwave-js-ui/archive/${ZWAVE_JS_UI_VERSION}.tar.gz" \
     && tar zxvf \
@@ -35,32 +33,23 @@ RUN \
         --strip 1 -C /opt \
     \
     && cd /opt \
-    && yarn install --immutable \
-    && yarn run build:server \
-    && yarn run build:ui \
-    && npm_config_build_from_source=true \
-        yarn rebuild @serialport/bindings-cpp \
-    && yarn remove \
-        $(jq -r '.devDependencies | keys | join(" ")' package.json) \
-    && yarn cache clean \
+    && npm ci \
+    && npm run build:server \
+    && npm run build:ui \
+    && npm rebuild --build-from-source @serialport/bindings-cpp \
+    && npm prune --omit=dev \
+    && npm cache clean --force \
     \
-    && npm uninstall -g yarn \
     && apk del --no-cache --purge .build-dependencies \
+    && find /opt -mindepth 1 -maxdepth 1 \
+        ! -name "node_modules" \
+        ! -name "snippets" \
+        ! -name "package.json" \
+        ! -name "server" \
+        ! -name "dist" \
+        -exec rm -rf {} + \
     && rm -f -r \
         /etc/nginx \
-        /opt/build \
-        /opt/index.html \
-        /opt/package.sh \
-        /opt/src \
-        /opt/static \
-        /opt/stylesheets \
-        /opt/.[!.]* \
-        /opt/*.md \
-        /opt/nodemon.json \
-        /opt/kustomization.yaml \
-        /opt/kubernetes \
-        /opt/docker \
-        /opt/docs \
         /root/.cache \
         /root/.config \
         /root/.npmrc \
