@@ -1,3 +1,8 @@
+# Setup base
+ARG ZWAVE_JS_UI_VERSION="9.6.0"
+
+FROM zwavejs/zwave-js-ui:${ZWAVE_JS_UI_VERSION} as build
+
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:15.0.1
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
@@ -10,44 +15,14 @@ ENV \
     S6_KILL_GRACETIME=30000 \
     S6_SERVICES_GRACETIME=30000
 
-# Setup base
-ARG ZWAVE_JS_UI_VERSION="v9.5.1"
 # hadolint ignore=DL3003,SC2046
 RUN \
-    apk add --no-cache --virtual .build-dependencies \
-        build-base=0.5-r3 \
-        linux-headers=6.5-r0 \
-        npm=10.2.5-r0 \
-        python3-dev=3.11.6-r1 \
-    \
-    && apk add --no-cache \
+    apk add --no-cache \
         eudev=3.2.14-r0 \
         libusb=1.0.26-r3 \
         nginx=1.24.0-r14 \
         nodejs=20.10.0-r1 \
     \
-    && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
-        "https://github.com/zwave-js/zwave-js-ui/archive/${ZWAVE_JS_UI_VERSION}.tar.gz" \
-    && tar zxvf \
-        /tmp/zwave-js-ui.tar.gz \
-        --strip 1 -C /opt \
-    \
-    && cd /opt \
-    && npm ci \
-    && npm run build:server \
-    && npm run build:ui \
-    && npm rebuild --build-from-source @serialport/bindings-cpp \
-    && npm prune --omit=dev \
-    && npm cache clean --force \
-    \
-    && apk del --no-cache --purge .build-dependencies \
-    && find /opt -mindepth 1 -maxdepth 1 \
-        ! -name "node_modules" \
-        ! -name "snippets" \
-        ! -name "package.json" \
-        ! -name "server" \
-        ! -name "dist" \
-        -exec rm -rf {} + \
     && rm -f -r \
         /etc/nginx \
         /root/.cache \
@@ -62,6 +37,8 @@ RUN \
 
 # Copy root filesystem
 COPY rootfs /
+
+COPY --from=build /usr/src/app /opt
 
 # Health check
 HEALTHCHECK CMD curl --fail http://127.0.0.1:8099/health/zwave || exit 1
