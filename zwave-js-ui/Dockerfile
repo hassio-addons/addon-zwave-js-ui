@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:15.0.3
+ARG BUILD_FROM=ghcr.io/hassio-addons/base-nodejs:0.1.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -17,14 +17,12 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
         linux-headers=6.5-r0 \
-        npm=10.2.5-r0 \
         python3-dev=3.11.6-r1 \
     \
     && apk add --no-cache \
         eudev=3.2.14-r0 \
         libusb=1.0.26-r3 \
         nginx=1.24.0-r14 \
-        nodejs=20.10.0-r1 \
     \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
         "https://github.com/zwave-js/zwave-js-ui/archive/${ZWAVE_JS_UI_VERSION}.tar.gz" \
