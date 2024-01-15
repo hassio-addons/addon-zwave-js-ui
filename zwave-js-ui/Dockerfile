@@ -11,7 +11,7 @@ ENV \
     S6_SERVICES_GRACETIME=30000
 
 # Setup base
-ARG ZWAVE_JS_UI_VERSION="v9.6.2"
+ARG ZWAVE_JS_UI_VERSION="v9.7.0"
 # hadolint ignore=DL3003,SC2046
 RUN \
     apk add --no-cache --virtual .build-dependencies \
