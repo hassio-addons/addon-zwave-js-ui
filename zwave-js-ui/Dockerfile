@@ -22,7 +22,7 @@ RUN \
     && apk add --no-cache \
         eudev=3.2.14-r0 \
         libusb=1.0.26-r3 \
-        nginx=1.24.0-r15 \
+        nginx=1.24.0-r16 \
     \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
         "https://github.com/zwave-js/zwave-js-ui/archive/${ZWAVE_JS_UI_VERSION}.tar.gz" \
