@@ -20,7 +20,7 @@ RUN \
         python3-dev=3.11.9-r0 \
     \
     && apk add --no-cache \
-        eudev=3.2.14-r0 \
+        eudev=3.2.14-r1 \
         libusb=1.0.26-r3 \
         nginx=1.24.0-r16 \
     \
