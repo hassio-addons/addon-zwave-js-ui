@@ -70,7 +70,7 @@ Now it is time to set up Home Assistant:
    - **UNCHECK** that box, it will install the official add-on.
    - Again, the official add-on is recommended, so...
 1. In the next dialog it will ask for the server. Enter:
-   `ws://a0d7b954-zwavejs2mqtt:3000`
+   `ws://a0d7b954-zwavejs2mqtt:3000` literally. You enter this exact value no matter what machine you are running on despite that seeming strange.
 1. Confirm and done!
 
 ## Configuration
