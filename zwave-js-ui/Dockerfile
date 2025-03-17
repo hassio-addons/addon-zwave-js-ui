@@ -22,7 +22,7 @@ RUN \
     && apk add --no-cache \
         eudev=3.2.14-r5 \
         libusb=1.0.27-r0 \
-        nginx=1.26.2-r4 \
+        nginx=1.26.3-r0 \
         nodejs=22.13.1-r0 \
         npm=10.9.1-r0 \
     \
