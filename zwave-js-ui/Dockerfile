@@ -17,7 +17,7 @@ RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
         linux-headers=6.6-r1 \
-        python3-dev=3.12.10-r0 \
+        python3-dev=3.12.10-r1 \
     \
     && apk add --no-cache \
         eudev=3.2.14-r5 \
