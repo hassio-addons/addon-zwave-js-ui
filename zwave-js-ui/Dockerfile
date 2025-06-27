@@ -16,15 +16,15 @@ ARG ZWAVE_JS_UI_VERSION="v10.7.0"
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
-        linux-headers=6.6-r1 \
+        linux-headers=6.14.2-r0 \
         python3-dev=3.12.11-r0 \
     \
     && apk add --no-cache \
         eudev=3.2.14-r5 \
-        libusb=1.0.27-r0 \
-        nginx=1.26.3-r0 \
-        nodejs=22.15.1-r0 \
-        npm=10.9.1-r0 \
+        libusb=1.0.28-r0 \
+        nginx=1.28.0-r3 \
+        nodejs=22.16.0-r2 \
+        npm=11.3.0-r0 \
     \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
         "https://github.com/zwave-js/zwave-js-ui/archive/${ZWAVE_JS_UI_VERSION}.tar.gz" \
