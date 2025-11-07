@@ -4,7 +4,6 @@ version: dev
 slug: zwavejs2mqtt
 description: Fully configurable Z-Wave JS gateway and control panel
 url: https://github.com/hassio-addons/addon-zwave-js-ui
-codenotary: codenotary@frenck.dev
 ingress: true
 ingress_stream: true
 panel_title: Z-Wave JS
