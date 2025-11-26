@@ -24,7 +24,7 @@ RUN \
         libusb=1.0.28-r0 \
         nginx=1.28.0-r3 \
         nodejs=22.16.0-r2 \
-        npm=11.4.2-r0 \
+        npm=11.6.4-r0 \
     \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
         "https://github.com/zwave-js/zwave-js-ui/archive/${ZWAVE_JS_UI_VERSION}.tar.gz" \
