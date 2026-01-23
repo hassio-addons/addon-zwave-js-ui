@@ -23,7 +23,7 @@ RUN \
         eudev=3.2.14-r5 \
         libusb=1.0.28-r0 \
         nginx=1.28.0-r3 \
-        nodejs=22.16.0-r2 \
+        nodejs=22.22.0-r0 \
         npm=11.6.4-r0 \
     \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
