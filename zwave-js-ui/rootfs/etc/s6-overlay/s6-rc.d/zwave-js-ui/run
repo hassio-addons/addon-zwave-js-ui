@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: Z-Wave JS UI
+# Home Assistant Community App: Z-Wave JS UI
 # Starts zwave-js-ui
 # ==============================================================================
 bashio::log.info "Starting the Z-Wave JS UI..."
