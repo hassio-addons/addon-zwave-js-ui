@@ -1,4 +1,4 @@
-# Home Assistant Community Add-on: Z-Wave JS UI
+# Home Assistant Community App: Z-Wave JS UI
 
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
@@ -24,7 +24,7 @@ Fully configurable Z-Wave JS control panel and MQTT gateway.
 
 ## About
 
-The Z-Wave JS UI add-on provides an additional control panel, allowing you
+The Z-Wave JS UI app provides an additional control panel, allowing you
 to configure every aspect of your Z-Wave network. It provides a decoupled
 gateway which can communicate using Z-Wave JS WebSockets (used by the
 Home Assistant Z-Wave JS integration) and MQTT (even simultaneously).
@@ -37,11 +37,11 @@ Some advantages and use-cases:
   it is available for Home Assistant at the same time.
 - Allow [ESPHome.io][esphome] based ESP devices to directly respond or work
   with your Z-Wave network.
-- Pre-configures itself with the Mosquitto add-on when found.
+- Pre-configures itself with the Mosquitto app when found.
 
-This add-on uses the [Z-Wave JS UI][zwave-js-ui] software.
+This app uses the [Z-Wave JS UI][zwave-js-ui] software.
 
-[:books: Read the full add-on documentation][docs]
+[:books: Read the full app documentation][docs]
 
 ## Support
 
@@ -49,7 +49,7 @@ Got questions?
 
 You have several options to get them answered:
 
-- The [Home Assistant Community Add-ons Discord chat server][discord] for add-on
+- The [Home Assistant Community Apps Discord chat server][discord] for app
   support and feature requests.
 - The [Home Assistant Discord chat server][discord-ha] for general Home
   Assistant discussions and questions.
@@ -75,18 +75,18 @@ The original setup of this repository is by [Franck Nijhof][frenck].
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
 
-## We have got some Home Assistant add-ons for you
+## We have got some Home Assistant apps for you
 
 Want some more functionality to your Home Assistant instance?
 
-We have created multiple add-ons for Home Assistant. For a full list, check out
+We have created multiple apps for Home Assistant. For a full list, check out
 our [GitHub Repository][repository].
 
 ## License
 
 MIT License
 
-Copyright (c) 2021 - 2025 Franck Nijhof
+Copyright (c) 2021 - 2026 Franck Nijhof
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -108,29 +108,29 @@ SOFTWARE.
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-zwave-js-ui.svg
-[commits]: https://github.com/hassio-addons/addon-zwave-js-ui/commits/main
-[contributors]: https://github.com/hassio-addons/addon-zwave-js-ui/graphs/contributors
+[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/app-zwave-js-ui.svg
+[commits]: https://github.com/hassio-addons/app-zwave-js-ui/commits/main
+[contributors]: https://github.com/hassio-addons/app-zwave-js-ui/graphs/contributors
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord-shield]: https://img.shields.io/discord/478094546522079232.svg
 [discord]: https://discord.me/hassioaddons
-[docs]: https://github.com/hassio-addons/addon-zwave-js-ui/blob/main/zwave-js-ui/DOCS.md
+[docs]: https://github.com/hassio-addons/app-zwave-js-ui/blob/main/zwave-js-ui/DOCS.md
 [esphome]: https://esphome.io/components/mqtt.html#on-message-trigger
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/?u=frenck
 [frenck]: https://github.com/frenck
-[github-actions-shield]: https://github.com/hassio-addons/addon-zwave-js-ui/workflows/CI/badge.svg
-[github-actions]: https://github.com/hassio-addons/addon-zwave-js-uis/actions
+[github-actions-shield]: https://github.com/hassio-addons/app-zwave-js-ui/workflows/CI/badge.svg
+[github-actions]: https://github.com/hassio-addons/app-zwave-js-ui/actions
 [github-sponsors-shield]: https://frenck.dev/wp-content/uploads/2019/12/github_sponsor.png
 [github-sponsors]: https://github.com/sponsors/frenck
-[issue]: https://github.com/hassio-addons/addon-zwave-js-ui/issues
-[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-zwave-js-ui.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2025.svg
+[issue]: https://github.com/hassio-addons/app-zwave-js-ui/issues
+[license-shield]: https://img.shields.io/github/license/hassio-addons/app-zwave-js-ui.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2026.svg
 [patreon-shield]: https://frenck.dev/wp-content/uploads/2019/12/patreon.png
 [patreon]: https://www.patreon.com/frenck
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-production%20ready-brightgreen.svg
 [reddit]: https://reddit.com/r/homeassistant
-[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-zwave-js-ui.svg
-[releases]: https://github.com/hassio-addons/addon-zwave-js-ui/releases
+[releases-shield]: https://img.shields.io/github/release/hassio-addons/app-zwave-js-ui.svg
+[releases]: https://github.com/hassio-addons/app-zwave-js-ui/releases
 [repository]: https://github.com/hassio-addons/repository
 [zwave-js-ui]: https://github.com/zwave-js/zwave-js-ui

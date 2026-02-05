@@ -1,8 +1,8 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: Z-Wave JS UI
-# Configures NGINX for use with this add-on.
+# Home Assistant Community App: Z-Wave JS UI
+# Configures NGINX for use with this app.
 # ==============================================================================
 bashio::var.json \
     entry "$(bashio::addon.ingress_entry)" \

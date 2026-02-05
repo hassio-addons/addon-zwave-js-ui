@@ -1,6 +1,6 @@
 #!/command/with-contenv bashio
 # ==============================================================================
-# Home Assistant Community Add-on: Z-Wave JS UI
+# Home Assistant Community App: Z-Wave JS UI
 # Take down the S6 supervision tree when Nginx fails
 # ==============================================================================
 declare exit_code
