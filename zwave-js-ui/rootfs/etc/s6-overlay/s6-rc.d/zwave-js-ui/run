@@ -12,7 +12,7 @@ export STORE_DIR=/data/store
 export ZWAVEJS_EXTERNAL_CONFIG=/data/db
 export FORCE_DISABLE_SSL=true
 
-cd /opt/ \
+cd /opt/node_modules/zwave-js-ui \
     || bashio::exit.nok "Could not change directory to application"
 
 exec node server/bin/www
