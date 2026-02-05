@@ -11,42 +11,24 @@ ENV \
     S6_SERVICES_GRACETIME=30000
 
 # Setup base
-ARG ZWAVE_JS_UI_VERSION="v11.11.0"
-# hadolint ignore=DL3003,SC2046
+ARG ZWAVE_JS_UI_VERSION="11.11.0"
 RUN \
-    apk add --no-cache --virtual .build-dependencies \
-        build-base=0.5-r3 \
-        linux-headers=6.16.12-r0 \
-        python3-dev=3.12.12-r0 \
-    \
-    && apk add --no-cache \
+    apk add --no-cache \
         eudev=3.2.14-r6 \
         libusb=1.0.29-r0 \
         nginx=1.28.0-r8 \
         nodejs=24.13.0-r1 \
         npm=11.6.3-r0 \
     \
-    && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
-        "https://github.com/zwave-js/zwave-js-ui/archive/${ZWAVE_JS_UI_VERSION}.tar.gz" \
-    && tar zxvf \
-        /tmp/zwave-js-ui.tar.gz \
-        --strip 1 -C /opt \
+    && npm install \
+        --no-audit \
+        --no-fund \
+        --no-update-notifier \
+        --omit=dev \
+        --prefix /opt \
+        "zwave-js-ui@${ZWAVE_JS_UI_VERSION}" \
     \
-    && cd /opt \
-    && npm ci \
-    && npm run build:server \
-    && npm run build:ui \
-    && npm prune --omit=dev \
     && npm cache clean --force \
-    \
-    && apk del --no-cache --purge .build-dependencies \
-    && find /opt -mindepth 1 -maxdepth 1 \
-        ! -name "node_modules" \
-        ! -name "snippets" \
-        ! -name "package.json" \
-        ! -name "server" \
-        ! -name "dist" \
-        -exec rm -rf {} + \
     && rm -f -r \
         /etc/nginx \
         /root/.cache \
