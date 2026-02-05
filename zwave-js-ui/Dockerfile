@@ -16,15 +16,15 @@ ARG ZWAVE_JS_UI_VERSION="v11.11.0"
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r3 \
-        linux-headers=6.14.2-r0 \
+        linux-headers=6.16.12-r0 \
         python3-dev=3.12.12-r0 \
     \
     && apk add --no-cache \
-        eudev=3.2.14-r5 \
-        libusb=1.0.28-r0 \
-        nginx=1.28.0-r3 \
-        nodejs=22.22.0-r0 \
-        npm=11.6.4-r0 \
+        eudev=3.2.14-r6 \
+        libusb=1.0.29-r0 \
+        nginx=1.28.0-r8 \
+        nodejs=24.13.0-r1 \
+        npm=11.6.3-r0 \
     \
     && curl -J -L -o /tmp/zwave-js-ui.tar.gz \
         "https://github.com/zwave-js/zwave-js-ui/archive/${ZWAVE_JS_UI_VERSION}.tar.gz" \
@@ -36,7 +36,6 @@ RUN \
     && npm ci \
     && npm run build:server \
     && npm run build:ui \
-    && npm rebuild --build-from-source @serialport/bindings-cpp \
     && npm prune --omit=dev \
     && npm cache clean --force \
     \
