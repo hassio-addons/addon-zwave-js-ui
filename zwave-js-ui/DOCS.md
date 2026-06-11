@@ -66,9 +66,10 @@ Now it is time to set up Home Assistant:
 1. Go to the Settings panel and click "Devices & Services".
 1. In the bottom right, click "+ Add Integration".
 1. Select the "Z-Wave" integration from the list.
-1. A dialog box will show, asking to use the app:
-   - **UNCHECK** that box, it will install the official app.
-   - Again, the official app is recommended, so...
+1. A dialog box will show, asking if you want to use the Z-Wave JS
+   Supervisor app:
+   - **UNCHECK** that box, so Home Assistant does not install and use
+     its own app, but connects to this app instead.
 1. In the next dialog it will ask for the server. Enter:
    `ws://a0d7b954-zwavejs2mqtt:3000`
 1. Confirm and done!
