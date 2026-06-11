@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:20.1.1
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:21.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -15,10 +15,10 @@ ARG ZWAVE_JS_UI_VERSION="11.19.1"
 RUN \
     apk add --no-cache \
         eudev=3.2.14-r6 \
-        libusb=1.0.29-r0 \
-        nginx=1.28.3-r3 \
-        nodejs=24.14.1-r0 \
-        npm=11.11.0-r0 \
+        libusb=1.0.30-r0 \
+        nginx=1.30.2-r1 \
+        nodejs=24.16.0-r0 \
+        npm=11.12.1-r0 \
     \
     && npm install \
         --no-audit \
