@@ -51,7 +51,7 @@ Home Assistant.
 To do this:
 
 1. Open the Z-Wave JS UI control panel by clicking the "OPEN WEB UI"
-   button on the app page in the Supervisor.
+   button on the app page.
 1. In the control panel, go to "Settings" in the menu and click on the "Zwave"
    bar that shows up on the right.
 1. Enter the following information:
