@@ -172,7 +172,6 @@ SOFTWARE.
 [discord-ha]: https://discord.gg/c5DvZ4e
 [discord]: https://discord.me/hassioaddons
 [esphome]: https://esphome.io/components/mqtt.html#on-message-trigger
-[forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/?u=frenck
 [frenck]: https://github.com/frenck
 [issue]: https://github.com/hassio-addons/app-zwave-js-ui/issues
